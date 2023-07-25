@@ -112,7 +112,8 @@ nav {
     object-fit: cover ;
     border-radius: 20px;
 }
-.modal {
+.modal,
+.modal-bg {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.6);
@@ -124,9 +125,11 @@ nav {
     align-items: center;
 }
 .modal-page {
+    z-index: 99;
     min-width: 30vw;
-    max-width: 50vw;
+    max-width: 60vw;
     max-height: 30vw;
+    overflow: scroll;
     background: #fff;
     border-radius: 20px;
     padding: 20px;
@@ -145,15 +148,15 @@ nav {
     border-radius: 20px;
 }
 .btn-control {
-    background: #9c1032;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
 }
 .btn {
     padding: 10px 20px;
     cursor: pointer;
     border: none;
-    border-radius: 6px;
+    border-radius: 5px;
     font-size: 1.2vw;
     transition: 0.3s;
 }
@@ -163,24 +166,34 @@ nav {
     margin: 10px;
 }
 .cartlist {
-    background: red;
 }
 .cartlist-item {
-    background: pink;
+    width: 40vw;
     display: flex;
     justify-content: space-between;
+    margin: 10px;
 }
 .cartlist-left {
-    background: yellow;
     display: flex;
 }
 .cartlist-right {
-    background: aqua;
+    display: flex;
+    align-items: center;
 }
 .cartlist-left img {
     width: 5vw;
     height: 5vw;
     object-fit: cover;
     border-radius: 10px;
-    margin-right: 10px;
+    margin-right: 10px; 
+}
+.btnc {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000000;
+    cursor: pointer;
 }
