@@ -54,7 +54,7 @@ function search(elem) {
         html += `<div onclick="openProductDetail(${i})" class="product-items ${product[i].type}">
                     <img class="product-img" src="${product[i].img}" alt="">
                      <p style="font-size: 1.2vw;" >${product[i].name}</p>
-                     <p style="font-size: 1.2vw;">${numberWithCommas(product[i].price) } THB</p>
+                     <p style="font-size: 1.2vw;">${numberWithCommas(product[i].price) }</p>
                 </div>`;
         }        
     }
@@ -82,7 +82,43 @@ function openProductDetail(index) {
     productindex = index;
     console.log(productindex)
     $("#modalDesc").css('display', 'flex')
+    $("#mdd-img").attr('src',product[index].img)
+    $("#mdd-name").text(product[index].name)
+    $("#mdd-price").text( numberWithCommas(product[index].price) + ' THB' )
+    $("#mdd-desc").text(product[index].description)
 }
 function closeModal() {
     $(".modal").css('display', 'none')
+}
+
+var cart = [];
+function addtocart() {
+    var pass = true;
+
+    for (let i =0; i < cart.length; i++) {
+        if(productindex == cart[i].index) {
+            console.log('found same product')
+            cart[i].count++;
+            pass = false;
+        }
+    }
+
+    if(pass) {
+        var obj = {
+            index: productindex,
+            id: product[productindex].id,
+            name: product[productindex].name,
+            price: product[productindex].price,
+            img: product[productindex].img,
+            count: 1 
+        };
+        //console.log(obj)
+        cart.push(obj)
+    }
+    console.log(cart)
+
+    Swal.fire({
+        icon: 'success',
+        title: 'Add ' + product[productindex].name + ' to cart!'
+    })
 }
