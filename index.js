@@ -7,5 +7,24 @@ var product = [{
     type: 'Premium'
 },{
     id: 2,
-    img: ''
-},{}]
+    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Open_book_nae_02.svg/375px-Open_book_nae_02.svg.png',
+    name: 'Book',
+    price: 30,
+    description:'Book Lorem ipsum dolor, sit amet consectetur adipisicing elit. In quisquam architecto, repellendus dolore minima obcaecati?',
+    type: 'Book',
+},{
+    id:3,
+    img: 'https://assets.adidas.com/images/w_700,h_700,f_auto,q_auto,fl_lossy,c_fill,g_auto/56f2935816e643aab316b398ffd6f8e8_9366/superstar-xlg-shoes.jpg',
+    name: 'Adidas Shoe',
+    price: 250,
+    description:'Shoe Lorem ipsum dolor, sit amet consectetur adipisicing elit. In quisquam architecto, repellendus dolore minima obcaecati?',
+    type: 'Shoe',
+}];
+
+$(document).ready(()=>{
+    var html = ''; 
+    //i = 1
+    for (let i = 0; i < 10; i++){
+        //state 3 
+    }
+})
