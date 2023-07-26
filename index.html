@@ -32,48 +32,19 @@
     
    <div class="container">
       <div class="sidebar">
-            <input type="text" class="sidebar-search" placeholder="Search find product">
-
-            <a href="#" class="sidebar-items">
-               Menu 1
+            <input onkeyup="search(this)" id="txt_search" type="text" class="sidebar-search" placeholder="Search find product">
+            <a onclick="searchproduct('all')" class="sidebar-items">
+               All Product
+            </a>   
+            <a onclick="searchproduct('Premium')" class="sidebar-items">
+               Premium
             </a>
-            <a href="#" class="sidebar-items">
-               Menu 2
+            <a onclick="searchproduct('Hub')" class="sidebar-items">
+               Hub
             </a>
-            <a href="#" class="sidebar-items">
-               Menu 3
-            </a>
-            <a href="#" class="sidebar-items">
-               Menu 4
-            </a>
-            
+     
       </div>
-      <div class="product">
-         <div class="product-item">
-            <img class="product-img" src="./imgs/Youtube.jpg" alt="">
-            <p style="font-size: 1.2vw;" >Product name</p>
-            <p style="font-size: 1.2vw;">500 THB</p>
-         </div>
-         <div class="product-item">
-            <img class="product-img" src="./imgs/Youtube.jpg" alt="">
-            <p style="font-size: 1.2vw;" >Product name</p>
-            <p style="font-size: 1.2vw;">500 THB</p>
-         </div>
-         <div class="product-item">
-            <img class="product-img" src="./imgs/Youtube.jpg" alt="">
-            <p style="font-size: 1.2vw;" >Product name</p>
-            <p style="font-size: 1.2vw;">500 THB</p>
-         </div>
-         <div class="product-item">
-            <img class="product-img" src="./imgs/Youtube.jpg" alt="">
-            <p style="font-size: 1.2vw;" >Product name</p>
-            <p style="font-size: 1.2vw;">500 THB</p>
-         </div>
-         <div class="product-item">
-            <img class="product-img" src="./imgs/Youtube.jpg" alt="">
-            <p style="font-size: 1.2vw;" >Product name</p>
-            <p style="font-size: 1.2vw;">500 THB</p>
-         </div>
+      <div id="productlist" class="product">
       </div>
    </div>
 
