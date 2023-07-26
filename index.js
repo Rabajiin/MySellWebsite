@@ -9,16 +9,16 @@ var product = [{
     id: 2,
     img: 'https://media.threatpost.com/wp-content/uploads/sites/103/2021/04/19145523/Discord-Nitro-e1618858537976.png',
     name: 'Discord Nitro',
-    price: 50,
+    price: 130,
     description:'Discord Lorem ipsum dolor, sit amet consectetur adipisicing elit. In quisquam architecto, repellendus dolore minima obcaecati?',
     type: 'Premium',
 },{
     id:3,
     img: 'logo.jpg',
-    name: 'SilentHub',
+    name: 'Silent Hub',
     price: 150,
     description:'Shoe Lorem ipsum dolor, sit amet consectetur adipisicing elit. In quisquam architecto, repellendus dolore minima obcaecati?',
-    type: 'Script',
+    type: 'Hub',
 }];
 
 
@@ -26,7 +26,7 @@ var product = [{
 $(document).ready(()=>{
     var html = ''; 
     for (let i = 0; i < product.length; i++){
-        html += `<div class="product-item ${product[i].type}">
+        html += `<div onclick="openProductDetail(${i})" class="product-items ${product[i].type}">
                     <img class="product-img" src="${product[i].img}" alt="">
                      <p style="font-size: 1.2vw;" >${product[i].name}</p>
                      <p style="font-size: 1.2vw;">${numberWithCommas(product[i].price) } THB</p>
@@ -51,7 +51,7 @@ function search(elem) {
 
     for (let i = 0; i < product.length; i++){
         if( product[i].name.includes(value)){
-        html += `<div class="product-item ${product[i].type}">
+        html += `<div onclick="openProductDetail(${i})" class="product-items ${product[i].type}">
                     <img class="product-img" src="${product[i].img}" alt="">
                      <p style="font-size: 1.2vw;" >${product[i].name}</p>
                      <p style="font-size: 1.2vw;">${numberWithCommas(product[i].price) } THB</p>
@@ -68,5 +68,21 @@ function search(elem) {
 
 function searchproduct(param) {
     console.log(param)
-    $(".product-item").css('display', '')
+     $(".product-items").css('display', 'none')
+    if(param == 'all') {
+        $(".product-items").css('display', 'block')
+    }
+    else {
+        $("."+param).css('display', 'block')
+    }
+}
+
+var productindex = 0;
+function openProductDetail(index) {
+    productindex = index;
+    console.log(productindex)
+    $("#modalDesc").css('display', 'flex')
+}
+function closeModal() {
+    $(".modal").css('display', 'none')
 }

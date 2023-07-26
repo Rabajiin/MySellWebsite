@@ -48,8 +48,8 @@
       </div>
    </div>
 
-   <div class="modal" style="display: none;">
-      <div class="modal-bg"></div>
+   <div id="modalDesc" class="modal" style="display: none;">
+      <div onclick="closeModal()" class="modal-bg"></div>
       <div class="modal-page">
          <h2>Detail</h2>
          <br>
@@ -62,7 +62,7 @@
                <p style="color: #adadad;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quod perspiciatis voluptatum quia ea quae quas cum accusantium consequatur dolore id dignissimos reprehenderit, eos nemo possimus officia quidem quam? Labore.</p>
                <br>
                <div class="btn-control">
-                  <button class="btn">
+                  <button onclick="closeModal()" class="btn">
                      Close
                   </button>
                   <button class="btn btn-buy">
