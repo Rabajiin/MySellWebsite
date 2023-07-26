@@ -121,4 +121,5 @@ function addtocart() {
         icon: 'success',
         title: 'Add ' + product[productindex].name + ' to cart!'
     })
+     $("#cartcount").css('display', 'flex').text(cart.length)
 }
