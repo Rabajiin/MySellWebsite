@@ -123,3 +123,6 @@ function addtocart() {
     })
      $("#cartcount").css('display', 'flex').text(cart.length)
 }
+function openCart() {
+    $('#modalCart').css('display','flex')
+}

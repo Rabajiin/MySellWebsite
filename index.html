@@ -21,7 +21,7 @@
 
          <div class="nav-profile">
             <p class="nav-profile-name">Silent</p>
-            <div class="nav-profile-cart">
+            <div onclick="openCart()" class="nav-profile-cart">
                <i class="fas fa-cart-shopping"></i>
                <div id="cartcount" class="cartcount" style="display: none;">
                   0
@@ -75,8 +75,8 @@
       </div>
    </div>
 
-   <div class="modal" style="display: none;" >
-      <div class="modal-bg"></div>
+   <div id="modalCart" class="modal" style="display: none;" >
+      <div onclick="closeModal()" class="modal-bg"></div>
       <div class="modal-page">
          <h2>My Cart</h2>
          <br>
@@ -161,7 +161,7 @@
             </div>
          </div>
          <div class="btn-control">
-            <button class="btn">
+            <button onclick="closeModal()" class="btn">
                Cancel
             </button>
             <button class="btn btn-buy">
