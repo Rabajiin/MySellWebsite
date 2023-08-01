@@ -168,7 +168,7 @@ nav {
 .cartlist {
 
 }
-.cartlist-item {
+.cartlist-items {
     width: 40vw;
     display: flex;
     justify-content: space-between;

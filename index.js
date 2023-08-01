@@ -2,7 +2,7 @@ var product = [{
     id: 1,
     img: 'https://d.line-scdn.net/lcp-prod-photo/20210522_6/1621682035977qsGrs_PNG/5C1A68YUZVRY8DFI6FT6IBFIPJZ7KW.png',
     name: 'YouTube Premium',
-    price: 30,
+    price: 40,
     description: 'YouTube Lorem ipsum dolor, sit amet consectetur adipisicing elit. In quisquam architecto, repellendus dolore minima obcaecati?',
     type: 'Premium'
 },{
@@ -125,4 +125,67 @@ function addtocart() {
 }
 function openCart() {
     $('#modalCart').css('display','flex')
+    rendercart() ;
+}
+
+function rendercart() {
+    if(cart.length > 0) {
+        var html = '';
+        for (let i=0; i < cart.length; i++) {
+            html += ` <div class="cartlist-items">
+                        <div class="cartlist-left">
+                            <img src="${cart[i].img}" alt="">
+                            <div class="cartlist-detail">
+                                <P style="font-size: 1.5vw;">${cart[i].name}</P>
+                                <P style="font-size: 1.2vw;">${numberWithCommas(cart[i].price * cart[i].count)} THB</P>
+                            </div>
+                        </div>
+                        <div class="cartlist-right">
+                            <P onclick="deinitems('-', ${i})" class="btnc">-</P>
+                            <p id="countitems${i}" style="margin: 0 15px;">${cart[i].count}</p>
+                            <p onclick="deinitems('+', ${i})" class="btnc">+</p>
+                        </div>
+                    </div>`;
+        }
+        $("#mycart").html(html)
+    }
+    else {
+        $("#mycart").html(`<p>Not found product list</p>`)
+    }
+}
+function deinitems(action, index) {
+    if(action == '-') {
+        if(cart[index].count > 0) {
+            cart[index].count--;
+            $("#countitems"+index).text(cart[index].count)
+
+            if(cart[index].count <= 0) {
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Are you sure to delete?',
+                    showConfirmButton: true,
+                    showCancelButton: true,
+                    confirmButtonText: 'Delete',
+                    cancelButtonText: 'Cancel',
+                }).then((res) => {
+                    if(res.isConfirmed) {
+                        cart.splice(index, 1)
+                        rendercart();
+                        $("#cartcount").css('display', 'flex').text(cart.length)
+
+                        if(cart.length <= 0) {
+                            $("#cartcount").css('display', 'none')
+                        }
+                    }
+                    else {
+                        cart[index].count++;
+                        $("#countitems"+index).text(cart[index].count)
+                    }
+                })
+            }
+        }
+    }
+    else if(action == '+') {
+
+    }
 }
