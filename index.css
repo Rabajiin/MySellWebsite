@@ -98,12 +98,12 @@ nav {
     background: #000000;
     color: #fff;
 }
-.product-item {
+.product-items {
     cursor: pointer;
     transition: 0.3s;
 
 }
-.product-item:hover {
+.product-items:hover {
     transform: scale(1.03);
 }
 .product-img {
