@@ -186,6 +186,7 @@ function deinitems(action, index) {
         }
     }
     else if(action == '+') {
-
+        cart[index].count++;
+        $("#countitems"+index).text(cart[index].count)
     }
 }
