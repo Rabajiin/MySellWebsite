@@ -3,15 +3,22 @@ var product = [{
     img: 'https://d.line-scdn.net/lcp-prod-photo/20210522_6/1621682035977qsGrs_PNG/5C1A68YUZVRY8DFI6FT6IBFIPJZ7KWi',
     name: 'YouTube Premium',
     price: 40,
-    description: '',
+    description: 'Youtube Premium Family, custommer must fill the email before buy this product',
     type: 'Premium'
 },{
     id: 2,
     img: 'https://media.threatpost.com/wp-content/uploads/sites/103/2021/04/19145523/Discord-Nitro-e1618858537976.png',
     name: 'Discord Nitro',
     price: 130,
-    description:'Discord Lorem ipsum dolor, sit amet consectetur adipisicing elit. In quisquam architecto, repellendus dolore minima obcaecati?',
+    description:'Discord Nitro Gift, customer must join the discord server before buy this product',
     type: 'Premium',
+},{
+    id: 3,
+    img: 'https://seeklogo.com/images/N/netflix-n-logo-0F1ED3EBEB-seeklogo.com.png',
+    name: 'Netflix Family',
+    price: '100',
+    type: 'Premium',
+    description: 'Netflix Family, Customer must wait email from admin after buy this product'
 }];
 
 
@@ -130,7 +137,7 @@ function rendercart() {
                             <img src="${cart[i].img}" alt="">
                             <div class="cartlist-detail">
                                 <P style="font-size: 1.5vw;">${cart[i].name}</P>
-                                <P style="font-size: 1.2vw;">${numberWithCommas(cart[i].price * cart[i].count)} THB</P>
+                                <P style="font-size: 1.25vw;">${numberWithCommas(cart[i].price * cart[i].count)} THB</P>
                             </div>
                         </div>
                         <div class="cartlist-right">
