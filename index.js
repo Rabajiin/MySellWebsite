@@ -1,9 +1,9 @@
 var product = [{
     id: 1,
-    img: 'https://d.line-scdn.net/lcp-prod-photo/20210522_6/1621682035977qsGrs_PNG/5C1A68YUZVRY8DFI6FT6IBFIPJZ7KW.png',
+    img: 'https://d.line-scdn.net/lcp-prod-photo/20210522_6/1621682035977qsGrs_PNG/5C1A68YUZVRY8DFI6FT6IBFIPJZ7KWi',
     name: 'YouTube Premium',
     price: 40,
-    description: 'YouTube Lorem ipsum dolor, sit amet consectetur adipisicing elit. In quisquam architecto, repellendus dolore minima obcaecati?',
+    description: '',
     type: 'Premium'
 },{
     id: 2,
@@ -12,13 +12,6 @@ var product = [{
     price: 130,
     description:'Discord Lorem ipsum dolor, sit amet consectetur adipisicing elit. In quisquam architecto, repellendus dolore minima obcaecati?',
     type: 'Premium',
-},{
-    id:3,
-    img: 'logo.jpg',
-    name: 'Silent Hub',
-    price: 150,
-    description:'Shoe Lorem ipsum dolor, sit amet consectetur adipisicing elit. In quisquam architecto, repellendus dolore minima obcaecati?',
-    type: 'Hub',
 }];
 
 
