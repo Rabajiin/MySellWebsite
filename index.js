@@ -158,7 +158,7 @@ function deinitems(action, index) {
         if(cart[index].count > 0) {
             cart[index].count--;
             $("#countitems"+index).text(cart[index].count)
-
+            rendercart() ;
             if(cart[index].count <= 0) {
                 Swal.fire({
                     icon: 'warning',
@@ -180,6 +180,7 @@ function deinitems(action, index) {
                     else {
                         cart[index].count++;
                         $("#countitems"+index).text(cart[index].count)
+                        rendercart() ;
                     }
                 })
             }
@@ -188,5 +189,6 @@ function deinitems(action, index) {
     else if(action == '+') {
         cart[index].count++;
         $("#countitems"+index).text(cart[index].count)
+        rendercart() ;
     }
 }
