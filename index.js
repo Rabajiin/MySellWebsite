@@ -59,9 +59,12 @@ function search(elem) {
         }        
     }
     if(html == ''){
-        $("#productlist").html(`<p>Not found product</p>`);
+        $("#notfound").css('display', 'contents')
+        $("#productlist").html(`<p style="font-size: 2vw; ">Not found product</p>`);
     } else {
+        $("#notfound").css('display', 'none')
         $("#productlist").html(html);
+        
     }
 
 }

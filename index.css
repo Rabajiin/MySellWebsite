@@ -52,6 +52,13 @@ nav {
     align-items: center;
     color: #fff;
 }
+.notfound {
+    width: 90vw;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .container {
     width: 90vw;
     margin: auto;
@@ -65,8 +72,10 @@ nav {
 }
 .product {
     width: 80%;
-    padding: 10px;
+    padding: 50px;
     display: grid;
+    justify-content: center;
+    align-items: center;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
 }
@@ -166,7 +175,7 @@ nav {
     margin: 10px;
 }
 .cartlist {
-
+    
 }
 .cartlist-items {
     width: 40vw;
