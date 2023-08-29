@@ -59,8 +59,8 @@ function search(elem) {
         }        
     }
     if(html == ''){
-        $("#notfound").css('display', 'contents')
-        $("#productlist").html(`<p style="font-size: 2vw; ">Not found product</p>`);
+        $("#notfound").css('display', 'flex')
+        $("#productlist").html(`<p style="font-size: 2vw; "></p>`);
     } else {
         $("#notfound").css('display', 'none')
         $("#productlist").html(html);
