@@ -1,16 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif; 
-    text-decoration: none;
+.html {
+    height: 100%;
 }
-.text1 {
-    height: 20vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 5vw;
-
+.body {
+    height: 50%;
+    width: 50%;
+    background: pink;
 }
