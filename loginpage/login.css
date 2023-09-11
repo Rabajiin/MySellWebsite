@@ -68,3 +68,16 @@
     margin-top: 40px;
     letter-spacing: 4px;
 }
+.login-box a:hover {
+    background: aqua;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 5px aqua,
+    0 0 25px aqua,
+    0 0 20px aqua,
+    0 0 70px aqua;
+}
+.login-box a span {
+    position: absolute;
+    display: block;
+}
