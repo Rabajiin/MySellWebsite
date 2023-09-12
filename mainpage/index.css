@@ -200,9 +200,3 @@ nav {
     border: 1px solid #000000;
     cursor: pointer;
 }
-.not-f {
-    align-items: center;
-    justify-content: center;
-    display: flex;  
-    font-size: 1.5vw;
-}
