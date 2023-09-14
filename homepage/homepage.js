@@ -1,3 +1,17 @@
+document.addEventListener("DOMContentLoaded", function () {
+const toggleButton = document.getElementById('toggleButton');
+toggleButton.addEventListener('click', () => {
+toggleButton.classList.toggle('navbar-toggler');
+toggleButton.classList.toggle('navbar-toggler');
+toggleButton.classList.toggle('collapsed');
+toggleButton.classList.toggle('not-collapsed');
+
+if (toggleButton.classList.contains('navbar-toggler','not-collapsed')) {
+    $('#nav-collapse').css('display','flex')
+    } else {
+    $('#nav-collapse').css('display','none')   
+    }
+})});
 function openlogin() {
     $(".login-close").css('display','flex')
 }
