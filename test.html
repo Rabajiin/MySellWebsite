@@ -1,15 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Toggle Button</title>
+    <title>Login Button Example</title>
 </head>
 <body>
-    <div class="toggle-container">
-        <button id="toggle-button" class="navbar-toggler not-collapsed">ปิด</button>
-    </div>
-    <script src="test.js"></script>
+    <!-- สร้างปุ่ม Login ด้วย HTML -->
+    <button id="loginButton">Login</button>
+
+    <!-- สร้างสคริปต์ JavaScript เพื่อรับคลิกปุ่ม -->
+    <script>
+        // รับอ้างอิงไปยังปุ่ม Login โดยใช้ id
+        var loginButton = document.getElementById("loginButton");
+
+        // เพิ่มเหตุการณ์คลิกปุ่ม
+        loginButton.addEventListener("click", function() {
+            // ทำสิ่งที่คุณต้องการที่นี่ เช่น เปิดหน้าล็อกอิน
+            alert("คุณกำลังเข้าสู่ระบบ");
+        });
+    </script>
 </body>
 </html>
